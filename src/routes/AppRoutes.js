@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+import Categories from "../pages/Categories";
 
 function AppRoutes() {
   return (
@@ -33,6 +34,14 @@ function AppRoutes() {
     <PublicRoute>
       <Register />
     </PublicRoute>
+  }
+/>
+<Route
+  path="/categories"
+  element={
+    <PrivateRoute>
+      <Categories />
+    </PrivateRoute>
   }
 />
       </Routes>
